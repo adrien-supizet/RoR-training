@@ -1,0 +1,5 @@
+<%= simple_form_for(@character, html: { class: 'form-inline' }) do |form| %>
+  <%= form.input :name, label: 'Name of the character', error: 'Name is required', input_html: { maxlength: 20 }%>
+  <%= form.input :species, :collection => @species %>
+  <%= form.button :submit %>
+<% end %>
